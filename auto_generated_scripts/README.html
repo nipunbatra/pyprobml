@@ -219,6 +219,20 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <p>This folder contains the auto-generated scripts from the notebooks present in the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> folder. Generation of these files takes place automatically via the GitHub workflow.</p>
+<p>To run these scripts, please use <code class="docutils literal notranslate"><span class="pre">ipython</span></code> instead of <code class="docutils literal notranslate"><span class="pre">python</span></code> else <code class="docutils literal notranslate"><span class="pre">get_ipython()</span></code> will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>Example usage:</p>
+<ul class="simple">
+<li><p>Without saving the figures. No <code class="docutils literal notranslate"><span class="pre">latexify</span></code>.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipython discrete_prob_dist_plot.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Save figures with <code class="docutils literal notranslate"><span class="pre">latexify</span></code>.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DEV_MODE</span><span class="o">=</span><span class="m">1</span> ipython discrete_prob_dist_plot.py
+</pre></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
